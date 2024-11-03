@@ -78,7 +78,7 @@ def computation(operand1, operand2, operator):
 
 def math_quiz():
     score = 0 # Variable to keep score
-    num_computation = 3 # Set number of computations
+    num_computation = 10 # Set number of computations
 
     print("Welcome to the Math Quiz Game!")
     print("You will be presented with math problems, and you need to provide the correct answers.")
@@ -88,7 +88,8 @@ def math_quiz():
 
     for _ in range(num_computation):
         # Generate random operands (int) and operator
-        operand1 = gen_random_int(1, 10); operand2 = gen_random_int(1, 5); operator = gen_random_math_operator()
+        operand1 = gen_random_int(1, 10); operand2 = gen_random_int(-2, 2)
+        operator = gen_random_math_operator()
 
         # Generate and print problem statement and store result with computation()
         problem, answer = computation(operand1, operand2, operator)
